@@ -2,30 +2,36 @@
 
 This theme is not meant to be used as-is. It is just a starting place for building your own theme for [SiteFarm Seed](https://github.com/ucdavis/sitefarm_seed)
 
-## Prerequesites 
+It is also assumed that you have created a Pattern Lab based on [SiteFarm Seed Pattern Lab](https://github.com/ucdavis/sitefarm-seed-patternlab) and will be importing styles from there.
 
-If you are a Windows user then it is recommended you use [Git for Windows](http://git-for-windows.github.io/).
+## Prerequesites 
 
 You'll need [node.js](http://nodejs.org).
 
-After installing Node you should install Gulp globally
+After installing Node you should install Gulp globally (you may need to use `sudo` if you get errors) or run tasks locally with npx `npx gulp`.
 
 ```
-$ sudo npm install --global gulp
+$ npm install --global gulp
 ```
 
 ## Install and setup
     
-After cloning and changing into that directory, run this to install dependencies (you may need to use `sudo` if you get errors):
+After cloning and changing into that directory, run this to install dependencies:
 
     $ npm install
 
 You may have to run that again for updates; so it may be wise to save this: `$ npm install`. **If you have any problems; this is the first thing to run.**
 
-Finally, to do an intial build of the site and start watching for changes run `gulp`
+Finally, to do an initial build of the site and start watching for changes run `gulp`
 
 ```
 $ gulp
+```
+
+If gulp is not installed globally, you can use the gulp specific to this theme.
+
+```
+$ npx gulp
 ```
 
 ## Sync Pattern Lab styles by importing into site
@@ -38,7 +44,7 @@ themeSync:
   src: /location/of/patternlab
 ```
 
-2. Run the theme sync gulp task:
+2. Run the themesync gulp task to import styles from Pattern Lab:
 
 ```
 $ gulp themesync
@@ -59,7 +65,7 @@ Install any [NPM](https://www.npmjs.com/) component with the `--save` flag. You 
 
     $ npm install {thing} --save
 
-Use `--save` when a package needs to be added as a dependency to the browser such as using [jQuery](https://jquery.com/).
+Use `--save` when a package needs to be added as a dependency to the browser.
 
 
 ### NPM CSS Dependencies
@@ -160,3 +166,16 @@ You can double click `help` to see descriptions of available tasks
 ### BrowserSync
 
 BrowserSync is being used by Gulp to allow live reloading so that changes will be injected automatically into the site without having to reload.
+
+## Windows Users
+
+If you are on Windows you may run into a few issues.
+
+It is recommended you use [Git for Windows](http://git-for-windows.github.io/).
+
+If you get an alert saying that Google Chrome can't run, try passing in a different browser string into your `gulp-config.local.yml` file.
+
+```yaml
+browserSync:
+  browser: ['chrome']
+```
