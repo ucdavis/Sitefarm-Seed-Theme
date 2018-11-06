@@ -1,8 +1,8 @@
-sitefarm_seed:
+global-styles:
   version: VERSION
   css:
-    base:
-      dist/vendor.css: {}
+#    base:
+#      dist/vendor.css: {}
     theme:
       dist/style.css: { minified: true }
   js:

@@ -24,8 +24,8 @@ js:
     # Drupal will add modernizr as a library
     - '!js/1_pattern_lab/vendor/modernizr-custom.js'
     # Ignore patternlab components which need to be redone as Drupal behaviors or added via a module
-    - '!js/pattern_lab/slideshow.js'
-    - '!js/pattern_lab/photoswipe.js'
+    - '!js/1_pattern_lab/slideshow.js'
+    - '!js/1_pattern_lab/photoswipe.js'
   externals:
     # Javascript provided already by Drupal.
     './vendor/modernizr-custom.js': 'Modernizr'

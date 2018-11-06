@@ -8,7 +8,7 @@ core: 8.x
 base theme: classy
 
 libraries:
-  - sitefarm_seed/sitefarm_seed
+  - sitefarm_seed/global-styles
 
 # Override Drupal libraries with libraries provided by this theme.
 libraries-override:
@@ -20,9 +20,6 @@ ckeditor_stylesheets:
 
 regions:
   header: Header
-  navigation: Navigation
-  page_title: Page Title
-  pre_content: Pre Content
   content: Content
   sidebar_first: First Sidebar
   sidebar_second: Second Sidebar

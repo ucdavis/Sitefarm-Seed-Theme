@@ -1,5 +1,7 @@
 # Getting Started
 
+This theme is not meant to be used as-is. It is just a starting place for building your own theme for [SiteFarm Seed](https://github.com/ucdavis/sitefarm_seed)
+
 ## Prerequesites 
 
 If you are a Windows user then it is recommended you use [Git for Windows](http://git-for-windows.github.io/).
