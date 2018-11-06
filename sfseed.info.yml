@@ -8,7 +8,7 @@ core: 8.x
 base theme: classy
 
 libraries:
-  - sitefarm_seed/global-styles
+  - sfseed/global-styles
 
 # Override Drupal libraries with libraries provided by this theme.
 libraries-override:

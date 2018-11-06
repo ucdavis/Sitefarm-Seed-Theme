@@ -8,7 +8,7 @@
 /**
  * Implements hook_page_attachments_alter().
  */
-function sitefarm_seed_page_attachments_alter(array &$page) {
+function sfseed_page_attachments_alter(array &$page) {
   // Tell IE to use latest rendering engine (not to use compatibility mode).
   $ie_edge = [
     '#type' => 'html_tag',
@@ -35,9 +35,9 @@ function sitefarm_seed_page_attachments_alter(array &$page) {
 /**
  * Implements hook_preprocess_page() for page.html.twig.
  */
-function sitefarm_seed_preprocess_page(array &$variables) {
+function sfseed_preprocess_page(array &$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 
   // Get the theme path for an image.
-  $variables['theme_images_path'] = base_path() . drupal_get_path('theme', 'sitefarm_seed') . '/images/';
+  $variables['theme_images_path'] = base_path() . drupal_get_path('theme', 'sfseed') . '/images/';
 }

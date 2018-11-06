@@ -1,5 +1,5 @@
 {
-    "name": "mypackage/sitefarm_seed_theme",
+    "name": "mypackage/sfseed",
     "description": "Theme for the Sitefarm Seed distribution",
     "type": "drupal-theme",
     "minimum-stability": "dev",

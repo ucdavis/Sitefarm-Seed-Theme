@@ -9,7 +9,7 @@ use Drupal\Component\Utility\Html;
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
-function sitefarm_seed_preprocess_html(array &$variables) {
+function sfseed_preprocess_html(array &$variables) {
   // Add a Node ID variable.
   if ($node = \Drupal::request()->attributes->get('node')) {
     // Revisions pass $node as the id directly, but regular pages are an object.
