@@ -8,7 +8,7 @@
 /**
  * Implements hook_page_attachments_alter().
  */
-function sitefarm_one_page_attachments_alter(array &$page) {
+function sitefarm_seed_page_attachments_alter(array &$page) {
   // Tell IE to use latest rendering engine (not to use compatibility mode).
   $ie_edge = [
     '#type' => 'html_tag',
@@ -35,7 +35,7 @@ function sitefarm_one_page_attachments_alter(array &$page) {
 /**
  * Implements hook_preprocess_page() for page.html.twig.
  */
-function sitefarm_one_preprocess_page(array &$variables) {
+function sitefarm_seed_preprocess_page(array &$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 
   // Get the theme path for an image.

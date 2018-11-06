@@ -16,7 +16,7 @@ foreach (glob($includes_path) as $filename) {
 /**
  *  Implements hook_css_alter().
  */
-function sitefarm_one_css_alter(&$css) {
+function sitefarm_seed_css_alter(&$css) {
   // Disable @import on each css file. Aggregation must be disabled.
   if (\Drupal::service('settings')->get('css_link_tags')) {
     // For each item, don't allow preprocessing to disable @import.

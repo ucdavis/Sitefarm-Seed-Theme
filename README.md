@@ -38,6 +38,7 @@ themeSync:
 
 2. Run the theme sync gulp task:
 
+
     $ gulp themesync
 
 ## Assets (CSS & JS)
