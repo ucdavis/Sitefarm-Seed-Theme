@@ -1,5 +1,12 @@
 global-styles:
   version: VERSION
   css:
+    base:
+      dist/vendor.css: {} # comment this out if not using a vendor.css file.
     theme:
-      dist/style.css: {}
+      dist/style.css: { minified: true }
+  js:
+    dist/scripts.js: { minified: true }
+  dependencies:
+    - core/normalize-css
+    - core/jquery
