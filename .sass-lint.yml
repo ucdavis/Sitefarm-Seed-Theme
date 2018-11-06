@@ -1,0 +1,121 @@
+# File Options
+files:
+  include: 'source/sass/**/*.s+(a|c)ss'
+  ignore:
+    - 'source/sass/vendor/**/*.*'
+# Rule Configuration
+rules:
+  # Extends
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 2
+
+  # Mixins
+  mixins-before-declarations: 2
+
+  # Line Spacing
+  one-declaration-per-line: 2
+  empty-line-between-blocks: 2
+  single-line-per-selector: 2
+
+  # Disallows
+  no-color-keywords: 2
+  no-color-literals: 0
+  no-css-comments: 2
+  no-debug: 2
+  no-duplicate-properties:
+    - 2
+    -
+      exclude:
+        - border
+        - font-size
+        - font-smoothing
+        - src
+  no-empty-rulesets: 2
+  no-extends: 0
+  no-ids: 2
+  no-important: 0
+  no-invalid-hex: 2
+  no-mergeable-selectors: 0
+  no-misspelled-properties:
+    - 2
+    - 'extra-properties':
+      - 'font-smoothing'
+      - '-ms-flex-basis'
+  no-qualifying-elements:
+    - 2
+    -
+      allow-element-with-attribute: true
+  no-trailing-zero: 2
+  no-transition-all: 0
+  no-url-protocols: 2
+  no-vendor-prefixes:
+    - 2
+    -
+      excluded-identifiers:
+        - ms
+  no-warn: 0
+  property-units: 0
+
+  # nesting
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+
+  # Name Formats
+  class-name-format:
+    - 2
+    -
+      convention: 'hyphenatedbem'
+  function-name-format: 0
+  id-name-format: 0
+  mixin-name-format: 2
+  placeholder-name-format: 0
+  variable-name-format: 2
+
+  # Style Guide
+  bem-depth:
+    - 2
+    -
+      max-depth: 2
+  border-zero: 2
+  brace-style:
+    - 2
+    -
+      style: 'stroustrup'
+      allow-single-line: false
+  clean-import-paths: 2
+  empty-args: 0
+  hex-length: 2
+  hex-notation: 2
+  indentation: 2
+  leading-zero: 0
+  nesting-depth:
+    - 2
+    -
+      max-depth: 4
+  pseudo-element: 0
+  property-sort-order: 0
+  quotes:
+    - 2
+    -
+      style: double
+  shorthand-values: 2
+  url-quotes: 0
+  variable-for-property: 0
+  zero-unit: 2
+
+  # Inner Spacing
+  space-after-comma: 2
+  space-before-colon: 2
+  space-after-colon: 2
+  space-before-brace: 2
+  space-before-bang: 2
+  space-after-bang: 2
+  space-between-parens: 2
+  space-around-operator: 0
+
+  # Final Items
+  no-trailing-whitespace: 2
+  trailing-semicolon: 2
+  final-newline: 2

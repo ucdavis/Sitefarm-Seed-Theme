@@ -1,0 +1,20 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+    class_panel ? 'panel',
+    class_box ? 'o-box',
+    class_box_large ? 'o-box--large'
+  ]
+%}
+{% set block_title_class = class_panel ? 'panel__title' %}
+
+{% set attributes = attributes.addClass(classes) %}
+{% set title_attributes = title_attributes.addClass(block_title_class) %}

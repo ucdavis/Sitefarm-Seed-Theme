@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the sitefarm_seed theme.
+ *
+ * Most preprocess functions will be an include.
+ */
+
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $filename) {
+  require_once dirname(__FILE__) . '/includes/' . basename($filename);
+}
+
+/**
+ *  Implements hook_css_alter().
+ */
+function sitefarm_one_css_alter(&$css) {
+  // Disable @import on each css file. Aggregation must be disabled.
+  if (\Drupal::service('settings')->get('css_link_tags')) {
+    // For each item, don't allow preprocessing to disable @import.
+    foreach ($css as &$item) {
+      if (file_exists($item['data'])) {
+        $item['preprocess'] = FALSE;
+      }
+    }
+  }
+}

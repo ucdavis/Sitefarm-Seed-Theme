@@ -1,0 +1,17 @@
+{
+  "name": "starterkit",
+  "version": "1.0.0",
+  "description": "Starterkit description",
+  "dependencies": {},
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  },
+  "devDependencies": {
+    "ucd-theme-tasks": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  }
+}

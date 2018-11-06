@@ -1,0 +1,16 @@
+// Drupal adds the .pager to the <nav> element and .pager__items to the <ul>
+// We need to remove the padding from the .pager__items element
+.pager {
+
+  &__items {
+    padding: 0;
+  }
+
+  .is-active,
+  .is-active a {
+    @extend %pager--current;
+  }
+
+}
+
+

@@ -1,0 +1,49 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Hero Banner.
+ *
+ * Available variables:
+ * - Look in the block.html.twig file for available variables.
+ */
+#}
+{% set label = FALSE %}
+{% set class_box = FALSE %}
+{% set attributes = attributes.addClass('hero-banner') %}
+{% set attributes = image_only ? attributes.addClass('hero-banner--image-only') : attributes %}
+
+{% block content %}
+  <div class="hero-banner__image">
+    {{ content.field_sf_image }}
+  </div>
+
+  <div class="hero-banner__body">
+    {% if content.field_sf_title %}
+      <div class="hero-banner__title">{{ content.field_sf_title.0['#context'].value }}</div>
+    {% endif %}
+
+    {% if content.field_sf_hb_sub_title %}
+      <div class="hero-banner__summary">
+        <p>{{ content.field_sf_hb_sub_title.0['#context'].value }}</p>
+      </div>
+    {% endif %}
+
+    <div class="hero-banner__button-group">
+      {% if video_embed_url %}
+        <a href="#" class="hero-banner__button hero-banner__video-play">Play Video</a>
+      {% endif %}
+      {% if content.field_sf_link|render %}
+        <a href="{{ content.field_sf_link.0['#url'] }}" class="hero-banner__button">{{ content.field_sf_link.0['#title'] }}</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if video_embed_url %}
+    <div class="hero-banner__video-popup u-hidden">
+      <iframe width="560" height="315" src="{{ video_embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  {% endif %}
+
+  {{ content|without('field_sf_image', 'field_sf_title', 'field_sf_hb_sub_title', 'field_sf_link', 'field_sf_hb_video_button') }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "field.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a taxonomy term reference label field on an entity full display.
+ *
+ * Available variables:
+ * - Look in the field.html.twig file for available variables.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{% set attributes = attributes.addClass('tags') %}

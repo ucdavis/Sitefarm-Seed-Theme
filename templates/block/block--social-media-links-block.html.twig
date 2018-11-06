@@ -1,0 +1,15 @@
+{% extends "block.html.twig" %}
+
+{%
+  set classes = [
+    'panel--transparent',
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+{% block content %}
+  <div class="social-follow">
+    {{ content }}
+  </div>
+{% endblock %}

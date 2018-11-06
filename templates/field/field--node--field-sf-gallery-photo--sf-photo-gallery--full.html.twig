@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for a sf_gallery_photo field on a node full display.
+ *
+ * Available variables:
+ * - Look in the field.html.twig file for available variables.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+{% if not label_hidden %}
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+{% endif %}
+<div{{ attributes.addClass('gallery') }}>
+  {% for item in items %}
+    <div{{ item.attributes.addClass('gallery__item') }}>{{ item.content }}</div>
+  {% endfor %}
+</div>

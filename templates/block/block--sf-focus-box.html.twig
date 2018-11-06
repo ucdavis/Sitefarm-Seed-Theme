@@ -1,0 +1,23 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Focus Block.
+ *
+ * Available variables:
+ * - Look in the block.html.twig file for available variables.
+ */
+#}
+{% set label = FALSE %}
+{% set class_box = FALSE %}
+{% set attributes = attributes.addClass('focus-box') %}
+
+{% block content %}
+  <div class="focus-box__image">
+    {{ content.field_sf_image }}
+  </div>
+  <h3 class="focus-box__title">{{ content.field_sf_title.0['#context'].value }}</h3>
+  <div class="focus-box__body">
+    {{ content|without('field_sf_image', 'field_sf_title') }}
+  </div>
+{% endblock %}

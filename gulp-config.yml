@@ -1,0 +1,54 @@
+# Default config can be found at https://github.com/ucdavis/ucd-theme-tasks/blob/master/config.default.js
+# This config may be overridden by creating a gulp-config.local.yml file
+css:
+  enabled: true
+  src:
+    - sass/**/*.scss
+    - '!sass/1_pattern_lab/**/*'
+  vendor:
+    - sass/vendor/**/*.css
+  dest: dist/
+  lint:
+    extraSrc:
+      - '!sass/1_pattern_lab/**/*'
+  sassdoc:
+    enabled: false
+
+js:
+  enabled: true
+  src:
+    - js/1_pattern_lab/**/*.js
+    - js/**/*.js
+    # Ignore vendor files since project files will import them.
+    - '!js/vendor/**/*.js'
+    # Drupal will add modernizr as a library
+    - '!js/1_pattern_lab/vendor/modernizr-custom.js'
+    # Ignore patternlab components which need to be redone as Drupal behaviors or added via a module
+    - '!js/pattern_lab/slideshow.js'
+    - '!js/pattern_lab/photoswipe.js'
+  externals:
+    # Javascript provided already by Drupal.
+    './vendor/modernizr-custom.js': 'Modernizr'
+    jquery: 'jQuery'
+    photoswipe: 'PhotoSwipe'
+    'photoswipe/dist/photoswipe-ui-default': 'PhotoSwipeUI_Default'
+    slick-carousel: 'slick-carousel'
+  dest: dist/
+  destName: scripts.js
+  eslint:
+    enabled: false
+    extraSrc:
+      - '!js/vendor/**/*.js'
+      - '!js/1_pattern_lab/**/*.js'
+
+nodeFiles:
+  enabled: true
+
+browserSync:
+  enabled: true
+  startPath: '/'
+
+# This is the destination of the CMS theme these source files will be ported to
+themeSync:
+  enabled: false
+  src: ../pattern_lab/ # This should be overridden per custom install

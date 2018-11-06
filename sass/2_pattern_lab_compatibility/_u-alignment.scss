@@ -1,0 +1,15 @@
+// Align Right
+.align-right {
+  @include u-align--right();
+}
+
+// Align Left
+.align-left {
+  @include u-align--left();
+}
+
+
+// Align Center
+.align-center {
+  @include u-align--center();
+}

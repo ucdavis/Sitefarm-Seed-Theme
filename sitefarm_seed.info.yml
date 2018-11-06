@@ -1,0 +1,29 @@
+name: SiteFarm Seed starter
+type: theme
+description: SiteFarm Seed starter theme using the SiteFarm Seed PatternLab style library
+package: SiteFarm
+core: 8.x
+
+# Using Classy as a base theme https://www.drupal.org/docs/8/theming-drupal-8/using-classy-as-a-base-theme
+base theme: classy
+
+libraries:
+  - sitefarm_seed/sitefarm_seed
+
+# Override Drupal libraries with libraries provided by this theme.
+libraries-override:
+  # Remove the Slick Slideshow theme
+  sitefarm_photo_gallery/sitefarm_photo_gallery.slick_theme: false
+
+ckeditor_stylesheets:
+  - dist/ckeditor.css
+
+regions:
+  header: Header
+  navigation: Navigation
+  page_title: Page Title
+  pre_content: Pre Content
+  content: Content
+  sidebar_first: First Sidebar
+  sidebar_second: Second Sidebar
+  footer: Footer

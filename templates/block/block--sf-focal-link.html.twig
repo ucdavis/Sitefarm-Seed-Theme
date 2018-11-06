@@ -1,0 +1,25 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Focal Link.
+ *
+ * Available variables:
+ * - Look in the block.html.twig file for available variables.
+ */
+#}
+{% set label = FALSE %}
+{% set class_box = FALSE %}
+
+{% block content %}
+  <a href="{{ content.field_sf_link.0['#url'] }}" class="focal-link">
+    <div class="focal-link__figure">
+      {{ content.field_sf_image }}
+    </div>
+
+    <div class="focal-link__body">
+      <strong>{{ content.field_sf_title }}</strong>
+    </div>
+  </a>
+  {{ content|without('field_sf_title', 'field_sf_icon_choice', 'field_sf_link', 'field_sf_image') }}
+{% endblock %}
