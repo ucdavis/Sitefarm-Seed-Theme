@@ -8,11 +8,6 @@ It is also assumed that you have created a Pattern Lab based on [SiteFarm Seed P
 
 You'll need [node.js](http://nodejs.org).
 
-After installing Node you should install Gulp globally (you may need to use `sudo` if you get errors) or run tasks locally with npx `npx gulp`.
-
-```
-$ npm install --global gulp
-```
 
 ## Install and setup
     
@@ -22,13 +17,7 @@ After cloning and changing into that directory, run this to install dependencies
 
 You may have to run that again for updates; so it may be wise to save this: `$ npm install`. **If you have any problems; this is the first thing to run.**
 
-Finally, to do an initial build of the site and start watching for changes run `gulp`
-
-```
-$ gulp
-```
-
-If gulp is not installed globally, you can use the gulp specific to this theme.
+Finally, to do an initial build of the site and start watching for changes run `gulp`. You should use the gulp version specific to your project by prefixing all your gulp commands with `npx`.
 
 ```
 $ npx gulp
@@ -47,7 +36,7 @@ themeSync:
 2. Run the themesync gulp task to import styles from Pattern Lab:
 
 ```
-$ gulp themesync
+$ npx gulp themesync
 ```
 
 ## Assets (CSS & JS)
@@ -145,14 +134,14 @@ Project configuration is found in `gulp-config.yml`. You can copy out config you
 
 ### Gulp Tasks
 
-There are 4 main gulp tasks you should be aware of. Just add `gulp` before each task like `$ gulp help`.
+There are 4 main gulp tasks you should be aware of. Just add `npx gulp` before each task like `$ npx gulp help`.
 
 1. **Help** - Displays a list of all the available tasks with a brief discription of each
 2. **Default** - Generate the entire site and start watching for changes to live reload in the browser
 3. **Compile** - Generate the entire site with all assets such as css and js
 4. **Validate** - Validate CSS and JS by linting
 
-`$ gulp` is the one most often used and is the same as `$ gulp default`
+`$ npx gulp` is the one most often used and is the same as `$ npx gulp default`
 
 ### Using Gulp with PHPStorm
 
